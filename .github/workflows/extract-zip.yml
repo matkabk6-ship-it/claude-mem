@@ -25,8 +25,8 @@ jobs:
           fi
           rm -rf /tmp/extracted
 
-      - name: Remove temporary workflow
-        run: rm -f .github/workflows/extract-zip.yml
+      - name: Remove workflow files from extracted tree
+        run: rm -rf .github/workflows
 
       - name: Commit extracted files
         run: |
